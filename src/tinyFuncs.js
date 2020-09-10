@@ -19,10 +19,8 @@
  */
 export function add () {
   const a = 21
-  const b = '21'
-
-  // TODO: Write your code here.
-
+  let b = '21'
+  b = Number.parseInt(b)
   return a + b
 }
 
