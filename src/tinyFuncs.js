@@ -33,8 +33,7 @@ export function concat () {
   const message = 'I\'m going to learn how to program in'
   const time = 9
   const weeks = 'weeks.'
-
-  // TODO: Write your code here.
+  return (`${message} ${time} ${weeks}`)
 }
 
 /**
