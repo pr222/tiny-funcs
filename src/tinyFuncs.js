@@ -54,7 +54,22 @@ export function round () {
  * @returns {string} A string with comma separated odd values.
  */
 export function getOddNumbers (max) {
-  // TODO: Write your code here.
+  // Make result into a string value
+  let result = ''
+  // Initialize loop
+  let i = 1
+  // Loop condition
+  while (i <= max) {
+  // Loop update
+    i += 2
+    // Add a comma (if it is not the first number)
+    if (result.length > 0) {
+      result += ', '
+    }
+    // Add the odd number
+    result += i
+  }
+  return result
 }
 
 /**
