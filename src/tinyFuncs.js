@@ -96,7 +96,7 @@ export function greetings() {
  * @param {string} str - The string being searched and replaced on.
  * @returns {string} A new string with all matches of a hyphen replaced by a space.
  */
-export function replaceHyphensFor (str) {
+export function replaceHyphensFor(str) {
   let result = ''
 
   for (let i = 0; i < str.length; i++) {
@@ -117,7 +117,7 @@ export function replaceHyphensFor (str) {
  * @param {string} str - The string being searched and replaced on.
  * @returns {string} A new string with all matches of a hyphen replaced by a space.
  */
-export function replaceHyphensWhile (str) {
+export function replaceHyphensWhile(str) {
   let result = ''
   let i = 0
 
@@ -126,7 +126,7 @@ export function replaceHyphensWhile (str) {
     if (theCheckedCharacter === '-') {
       result += ' '
     } else {
-      result +=theCheckedCharacter
+      result += theCheckedCharacter
     }
     i++
   }
@@ -146,12 +146,18 @@ export function getNumberSequence() {
   let result = ''
 
   for (let grouping = 1; grouping <= groupingsMaxValue; grouping++) {
-    for (let theNumber = 1; theNumber < numbersMaxValue; theNumber++) {
+    for (let theNumber = 1; theNumber <= numbersMaxValue; theNumber++) {
       // Result as a string
       result += `${grouping}${theNumber}`
+      // Add '-' but not to the last number
+      if (theNumber !== numbersMaxValue) {
+        result += '-'
+      }
     }
 
-
+    if (grouping < groupingsMaxValue) {
+      result += ', '
+    }
   }
 
   return result
