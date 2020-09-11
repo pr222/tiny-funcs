@@ -17,7 +17,7 @@
  *
  * @returns {number} The result of an arithmetic operation.
  */
-export function add () {
+export function add() {
   const a = 21
   let b = '21'
   b = Number.parseInt(b)
@@ -29,7 +29,7 @@ export function add () {
  *
  * @returns {string} The string 'I'm going to learn how to program in 9 weeks.'.
  */
-export function concat () {
+export function concat() {
   const message = 'I\'m going to learn how to program in'
   const time = 9
   const weeks = 'weeks.'
@@ -41,10 +41,10 @@ export function concat () {
  *
  * @returns {number} The sum of two variables rounded to the nearest integer.
  */
-export function round () {
+export function round() {
   const firstNumber = 12.24
   const secondNumber = 29.27
-  return Math.round(firstNumber+secondNumber)
+  return Math.round(firstNumber + secondNumber)
 }
 
 /**
@@ -53,20 +53,14 @@ export function round () {
  * @param {number} max - An integer greater than zero.
  * @returns {string} A string with comma separated odd values.
  */
-export function getOddNumbers (max) {
+export function getOddNumbers(max) {
   // Make result into a string value
   let result = ''
-  // Initialize loop
-  let i = 1
-  // Loop condition
-  while (i <= max) {
-  // Loop update
-    i += 2
-    // Add a comma (if it is not the first number)
+
+  for (let i = 1; i <= max; i += 2) {
     if (result.length > 0) {
       result += ', '
     }
-    // Add the odd number
     result += i
   }
   return result
@@ -82,7 +76,7 @@ export function getOddNumbers (max) {
  *
  * @returns {string} A greeting according to the time of day.
  */
-export function greetings () {
+export function greetings() {
   const hour = new Date().getHours()
 
   // TODO: Write your code here.
@@ -94,7 +88,7 @@ export function greetings () {
  * @param {string} str - The string being searched and replaced on.
  * @returns {string} A new string with all matches of a hyphen replaced by a space.
  */
-export function replaceHyphensFor (str) {
+export function replaceHyphensFor(str) {
   // TODO: Write your code here.
 }
 
@@ -104,7 +98,7 @@ export function replaceHyphensFor (str) {
  * @param {string} str - The string being searched and replaced on.
  * @returns {string} A new string with all matches of a hyphen replaced by a space.
  */
-export function replaceHyphensWhile (str) {
+export function replaceHyphensWhile(str) {
   // TODO: Write your code here.
 }
 
@@ -113,6 +107,6 @@ export function replaceHyphensWhile (str) {
  *
  * @returns {string} A string '11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53'.
  */
-export function getNumberSequence () {
+export function getNumberSequence() {
   // TODO: Write your code here.
 }
