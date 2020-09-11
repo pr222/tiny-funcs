@@ -96,8 +96,19 @@ export function greetings() {
  * @param {string} str - The string being searched and replaced on.
  * @returns {string} A new string with all matches of a hyphen replaced by a space.
  */
-export function replaceHyphensFor(str) {
-  // TODO: Write your code here.
+export function replaceHyphensFor (str) {
+  let result = ''
+
+  for (let i = 0; i < str.length; i++) {
+    const theCheckedCharacter = str.charAt(i)
+    if (theCheckedCharacter === '-') {
+      result += ' '
+    } else {
+      result += theCheckedCharacter
+    }
+  }
+
+  return result
 }
 
 /**
@@ -106,8 +117,21 @@ export function replaceHyphensFor(str) {
  * @param {string} str - The string being searched and replaced on.
  * @returns {string} A new string with all matches of a hyphen replaced by a space.
  */
-export function replaceHyphensWhile(str) {
-  // TODO: Write your code here.
+export function replaceHyphensWhile (str) {
+  let result = ''
+  let i = 0
+
+  while (i < str.length) {
+    const theCheckedCharacter = str.charAt(i)
+    if (theCheckedCharacter === '-') {
+      result += ' '
+    } else {
+      result +=theCheckedCharacter
+    }
+    i++
+  }
+
+  return result
 }
 
 /**
@@ -116,5 +140,19 @@ export function replaceHyphensWhile(str) {
  * @returns {string} A string '11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53'.
  */
 export function getNumberSequence() {
-  // TODO: Write your code here.
+  const groupingsMaxValue = 5
+  const numbersMaxValue = 3
+
+  let result = ''
+
+  for (let grouping = 1; grouping <= groupingsMaxValue; grouping++) {
+    for (let theNumber = 1; theNumber < numbersMaxValue; theNumber++) {
+      // Result as a string
+      result += `${grouping}${theNumber}`
+    }
+
+
+  }
+
+  return result
 }
