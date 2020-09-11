@@ -77,9 +77,17 @@ export function getOddNumbers(max) {
  * @returns {string} A greeting according to the time of day.
  */
 export function greetings() {
-  const hour = new Date().getHours()
-
-  // TODO: Write your code here.
+  let hour = new Date().getHours()
+  if (hour < 8) {
+    hour = 'Good night!'
+  } else if (hour < 12) {
+    hour = 'Good morning!'
+  } else if (hour < 18) {
+    hour = 'Good afternoon!'
+  } else if (hour < 24) {
+    hour = 'Good evening!'
+  }
+  return hour
 }
 
 /**
